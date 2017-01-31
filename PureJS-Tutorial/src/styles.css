@@ -9,15 +9,15 @@
   z-index: 1000;
   top: 0px;
   bottom: 0px;  
-  width: 16vw;
+  width: 18vw;
   color: #e1ffff;  
 }
 .nav-side-menu .brand {
   background-color: #23282e;
-  line-height: 50px;
+  line-height: 80px;
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
 }
 .nav-side-menu .toggle-btn {
   display: none;
@@ -197,7 +197,7 @@ body {
 @media (min-width: 768px) {
   .main {
     padding-right: 80px;
-    padding-left: 40px;
+    padding-left: 80px;
   }
 }
 .main .page-header {
