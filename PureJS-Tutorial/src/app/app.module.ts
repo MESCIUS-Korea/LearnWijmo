@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReferencingComponent } from './referencing/referencing.component';
 import { OverviewComponent } from './overview/overview.component';
+import { FilterComponent } from './FlexGrid/filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReferencingComponent,
-    OverviewComponent
+    OverviewComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

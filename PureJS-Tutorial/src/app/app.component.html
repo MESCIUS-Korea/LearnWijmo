@@ -25,7 +25,7 @@
           <a href="#">기본기능<span class="arrow"></span></a>
         </li>
         <ul class="sub-menu2 collapse" id="basic-sample2">
-          <li><a href="#">CSS3 Animation</a></li>
+          <a [routerLink]="['flexgrid-filter']"><li>필터/Filter</li></a>
           <li><a href="#">General</a></li>
           <li><a href="#">Buttons</a></li>
           <li><a href="#">Tabs & Accordions</a></li>
@@ -84,6 +84,13 @@
 </div>
 <div class="container-fluid">
   <div class="row">
+    <div class="banner">
+      <div class="banner-button">        
+        <button type="button" class="btn btn-info">기술지원</button> &nbsp;
+        <button type="button" class="btn btn-warning">API</button> &nbsp;
+        <button type="button" class="btn btn-success">Download</button>
+      </div>
+    </div>
     <br>
     <div class="col-md-10 col-md-offset-2 main">
       <!--ddd-->
