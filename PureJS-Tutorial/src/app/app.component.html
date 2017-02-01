@@ -1,31 +1,31 @@
 <div class="nav-side-menu">
-    <div class="brand">Wijmo 5 for PureJS</div>
-    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-    <div class="menu-list">
-      <ul id="menu-content" class="menu-content collapse out">
-        <li class="collapsed"><a [routerLink]="['/']">Overview</a></li>
-         <li class="collapsed">
-          <a [routerLink]="['referencing']">Referencing</a>          
+  <div class="brand">    
+    <img class="img-size" src="../assets/img/logo_wijmo_white.png" alt="Generic placeholder thumbnail"/>        
+    
+  <!--  <div> 
+      <button type="button" class="btn btn-default btn-sm">Download</button>
+      <button type="button" class="btn btn-default  btn-sm">기술지원</button>
+      <button type="button" class="btn btn-default  btn-sm">API</button>
+      </div>-->
+  </div>
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  <div class="menu-list">
+    <ul id="menu-content" class="menu-content collapse out">
+      <a [routerLink]="['/']">
+        <li class="collapsed">Overview</li>
+      </a>
+      <a [routerLink]="['referencing']">
+        <li class="collapsed">Referencing</li>
+      </a>
+      <li data-toggle="collapse" data-target="#basic-sample" class="collapsed">
+        <a href="#">FlexGrid<span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="basic-sample">
+        <li data-toggle="collapse" data-target="#basic-sample2" class="collapsed">
+          <a href="#">기본기능<span class="arrow"></span></a>
         </li>
-        <li data-toggle="collapse" data-target="#basic-sample" class="collapsed">
-          <a href="#">UI Elements <span class="arrow"></span></a>
-        </li>        
-        <ul class="sub-menu collapse" id="basic-sample">
-            <li data-toggle="collapse" data-target="#basic-sample2" class="collapsed">
-              <a href="#">CSS3 Animation<span class="arrow"></span></a>
-            </li>
-            <ul class="sub-menu2 collapse" id="basic-sample2">
-              <li><a href="#">CSS3 Animation</a></li>
-              <li><a href="#">General</a></li>
-              <li><a href="#">Buttons</a></li>
-              <li><a href="#">Tabs & Accordions</a></li>
-              <li><a href="#">Typography</a></li>
-              <li><a href="#">FontAwesome</a></li>
-              <li><a href="#">Slider</a></li>
-              <li><a href="#">Panels</a></li>
-              <li><a href="#">Widgets</a></li>
-              <li><a href="#">Bootstrap Model</a></li>
-            </ul>
+        <ul class="sub-menu2 collapse" id="basic-sample2">
+          <li><a href="#">CSS3 Animation</a></li>
           <li><a href="#">General</a></li>
           <li><a href="#">Buttons</a></li>
           <li><a href="#">Tabs & Accordions</a></li>
@@ -36,49 +36,58 @@
           <li><a href="#">Widgets</a></li>
           <li><a href="#">Bootstrap Model</a></li>
         </ul>
+        <li><a href="#">General</a></li>
+        <li><a href="#">Buttons</a></li>
+        <li><a href="#">Tabs & Accordions</a></li>
+        <li><a href="#">Typography</a></li>
+        <li><a href="#">FontAwesome</a></li>
+        <li><a href="#">Slider</a></li>
+        <li><a href="#">Panels</a></li>
+        <li><a href="#">Widgets</a></li>
+        <li><a href="#">Bootstrap Model</a></li>
+      </ul>
 
 
-        <li data-toggle="collapse" data-target="#service" class="collapsed">
-          <a href="#">Services <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="service">
-          <li>New Service 1</li>
-          <li>New Service 2</li>
-          <li>New Service 3</li>
-        </ul>
+      <li data-toggle="collapse" data-target="#service" class="collapsed">
+        <a href="#">Services <span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="service">
+        <li>New Service 1</li>
+        <li>New Service 2</li>
+        <li>New Service 3</li>
+      </ul>
 
 
-        <li data-toggle="collapse" data-target="#new" class="collapsed">
-          <a href="#">New <span class="arrow"></span></a>
-        </li>
-        <ul class="sub-menu collapse" id="new">
-          <li>New New 1</li>
-          <li>New New 2</li>
-          <li>New New 3</li>
-        </ul>
+      <li data-toggle="collapse" data-target="#new" class="collapsed">
+        <a href="#">New <span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="new">
+        <li>New New 1</li>
+        <li>New New 2</li>
+        <li>New New 3</li>
+      </ul>
 
 
-        <li>
-          <a href="#">
+      <li>
+        <a href="#">
             Profile
           </a>
-        </li>
+      </li>
 
-        <li>
-          <a href="#">
+      <li>
+        <a href="#">
             Users
           </a>
-        </li>
-      </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <br>
+    <div class="col-md-10 col-md-offset-2 main">
+      <!--ddd-->
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <br>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
-        <!--ddd-->        
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
+</div>
