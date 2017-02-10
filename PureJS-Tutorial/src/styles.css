@@ -20,6 +20,19 @@
   font-size: 30px;
   padding: 5px;
 }
+
+
+.menu-title {
+  background-color: #00BCD4;  
+  line-height: 20px;  
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+
 .nav-side-menu .toggle-btn {
   display: none;
 }
