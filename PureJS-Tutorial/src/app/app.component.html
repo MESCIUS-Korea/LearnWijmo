@@ -1,9 +1,9 @@
 <div class="nav-side-menu">
-  <div class="brand">    
-<img class="img-size" src="../assets/img/logo_wijmo_white.png" alt="Generic placeholder thumbnail"/>
+  <div class="brand">
+    <img class="img-size" src="../assets/img/logo_wijmo_white.png" alt="Generic placeholder thumbnail" />
     <!--    <img class="img-size" src="./assets/img/logo_wijmo_white.png" alt="Generic placeholder thumbnail"/>-->
-    
-  <!--  <div> 
+
+    <!--  <div> 
       <button type="button" class="btn btn-default btn-sm">Download</button>
       <button type="button" class="btn btn-default  btn-sm">기술지원</button>
       <button type="button" class="btn btn-default  btn-sm">API</button>
@@ -11,88 +11,40 @@
   </div>
   <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   <div class="menu-list">
-    <div class = "menu-title">
+    <div class="menu-title">
       PureJS Edition
-    </div>   
+    </div>
+
     <ul id="menu-content" class="menu-content collapse out">
-      <a [routerLink]="['/']">
-        <li class="collapsed">Overview</li>
-      </a>
-      <a [routerLink]="['referencing']">
-        <li class="collapsed">Referencing</li>
-      </a>
-      <li data-toggle="collapse" data-target="#basic-sample" class="collapsed">
-        <a href="#">FlexGrid<span class="arrow"></span></a>
-      </li>
-      <ul class="sub-menu collapse" id="basic-sample">
-        <li data-toggle="collapse" data-target="#basic-sample2" class="collapsed">
-          <a href="#">기본기능<span class="arrow"></span></a>
+      <div *ngFor='let tocs of toc'>
+        <li data-toggle="collapse" class="collapsed" [attr.data-target]="'#' + tocs.path">
+          {{tocs.header}}<span class="arrow"></span>          
         </li>
-        <ul class="sub-menu2 collapse" id="basic-sample2">
-          <a [routerLink]="['flexgrid-filter']"><li>필터/Filter</li></a>
-          <li><a href="#">General</a></li>
-          <li><a href="#">Buttons</a></li>
-          <li><a href="#">Tabs & Accordions</a></li>
-          <li><a href="#">Typography</a></li>
-          <li><a href="#">FontAwesome</a></li>
-          <li><a href="#">Slider</a></li>
-          <li><a href="#">Panels</a></li>
-          <li><a href="#">Widgets</a></li>
-          <li><a href="#">Bootstrap Model</a></li>
+        <ul class="sub-menu collapse" [attr.id]="tocs.path">
+          <div *ngFor='let item1 of tocs.items'>
+            <li data-toggle="collapse" class="collapsed" [attr.data-target]="'#' + item1.path" *ngIf='item1.items == null' (click)="onSelect(item1.path)">{{item1.header}}</li>              
+            <li data-toggle="collapse" class="collapsed" [attr.data-target]="'#' + item1.path" *ngIf='item1.items != null' >{{item1.header}}<span class="arrow"></span></li>                            
+            
+            <ul class="sub-menu2 collapse" [attr.id]="item1.path">
+              <div *ngFor='let item2 of item1.items'>
+                <li class="collapsed" (click)="onSelect(item2.path)">
+                  {{item2.header}}
+                </li>
+              </div>
+            </ul>
+          </div>
         </ul>
-        <li><a href="#">General</a></li>
-        <li><a href="#">Buttons</a></li>
-        <li><a href="#">Tabs & Accordions</a></li>
-        <li><a href="#">Typography</a></li>
-        <li><a href="#">FontAwesome</a></li>
-        <li><a href="#">Slider</a></li>
-        <li><a href="#">Panels</a></li>
-        <li><a href="#">Widgets</a></li>
-        <li><a href="#">Bootstrap Model</a></li>
-      </ul>
-
-
-      <li data-toggle="collapse" data-target="#service" class="collapsed">
-        <a href="#">Services <span class="arrow"></span></a>
-      </li>
-      <ul class="sub-menu collapse" id="service">
-        <li>New Service 1</li>
-        <li>New Service 2</li>
-        <li>New Service 3</li>
-      </ul>
-
-
-      <li data-toggle="collapse" data-target="#new" class="collapsed">
-        <a href="#">New <span class="arrow"></span></a>
-      </li>
-      <ul class="sub-menu collapse" id="new">
-        <li>New New 1</li>
-        <li>New New 2</li>
-        <li>New New 3</li>
-      </ul>
-
-
-      <li>
-        <a href="#">
-            Profile
-          </a>
-      </li>
-
-      <li>
-        <a href="#">
-            Users
-          </a>
-      </li>
+      </div>
     </ul>
   </div>
 </div>
 <div class="container-fluid">
   <div class="row">
     <div class="banner">
-      <div class="banner-button">   
-        <a href="http://cafe.naver.com/grapecity"  target="_blank" class="btn btn-info">기술지원</a>&nbsp;     
-        <a href="http://wijmo.com/5/docs/"  target="_blank" class="btn btn-warning">API</a>&nbsp;     
-        <a href="http://www.componentone.co.kr/downloads/default.htm#wijmo"  target="_blank" class="btn btn-success">Download</a>                     
+      <div class="banner-button">
+        <a href="http://cafe.naver.com/grapecity" target="_blank" class="btn btn-info">기술지원</a>&nbsp;
+        <a href="http://wijmo.com/5/docs/" target="_blank" class="btn btn-warning">API</a>&nbsp;
+        <a href="http://www.componentone.co.kr/downloads/default.htm#wijmo" target="_blank" class="btn btn-success">Download</a>
       </div>
     </div>
     <br>

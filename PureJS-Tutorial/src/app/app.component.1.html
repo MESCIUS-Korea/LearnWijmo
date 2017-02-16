@@ -1,0 +1,319 @@
+<div class="nav-side-menu">
+  <div class="brand">    
+<img class="img-size" src="../assets/img/logo_wijmo_white.png" alt="Generic placeholder thumbnail"/>
+    <!--    <img class="img-size" src="./assets/img/logo_wijmo_white.png" alt="Generic placeholder thumbnail"/>-->
+    
+  <!--  <div> 
+      <button type="button" class="btn btn-default btn-sm">Download</button>
+      <button type="button" class="btn btn-default  btn-sm">기술지원</button>
+      <button type="button" class="btn btn-default  btn-sm">API</button>
+      </div>-->
+  </div>
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  <div class="menu-list">
+    <div class = "menu-title">
+      PureJS Edition
+    </div>   
+     <ul id="menu-content" class="menu-content collapse out">
+      <li data-toggle="collapse" data-target="#wijmo5-main" class="collapsed">
+        Wijmo5 알아보기<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="wijmo5-main">
+        <a [routerLink]="['/']">
+          <li class="collapsed">개요</li>
+        </a>
+        <a [routerLink]="['referencing']">
+          <li class="collapsed">레퍼런싱</li>
+        </a>
+        <a [routerLink]="['ng1-directive']">
+          <li class="collapsed">AngularJS 디렉티브</li>
+        </a>
+        <a [routerLink]="['sizing-style']">
+          <li class="collapsed">컨트롤 크기 및 스타일</li>
+        </a>
+        <a [routerLink]="['psesudo']">
+          <li class="collapsed">Pseudo 클래스</li>
+        </a>
+        <a [routerLink]="['events']">
+          <li class="collapsed">이벤트/Events</li>
+        </a>
+        <a [routerLink]="['enumerations']">
+          <li class="collapsed">Enumeration</li>
+        </a>
+        <a [routerLink]="['globalization']">
+          <li class="collapsed">세계화/지역화</li>
+        </a>
+        <a [routerLink]="['glyphs']">
+          <li class="collapsed">Wijmo Glyphs</li>
+        </a>
+        <a [routerLink]="['intellisense']">
+          <li class="collapsed">JS 인텔리센스</li>
+        </a>
+        <a [routerLink]="['lesscss']">
+          <li class="collapsed">LESS CSS 사용</li>
+        </a>
+      </ul>
+
+
+      <li data-toggle="collapse" data-target="#flexgrid-main" class="collapsed">
+        그리드 (FlexGrid)<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="flexgrid-main">
+        <li data-toggle="collapse" data-target="#flexgrid-getstart" class="collapsed">
+          소개하기<span class="arrow"></span>
+        </li>
+        <ul class="sub-menu2 collapse" id="flexgrid-getstart">
+          <a [routerLink]="['flexgrid-filter']">
+            <li>구조설명</li>
+          </a>
+          <a href="#">
+            <li>그리드 패널</li>
+          </a>
+          <a href="#">
+            <li>컬럼과 로우</li>
+          </a>
+          <a href="#">
+            <li>가상화</li>
+          </a>
+          <a href="#">
+            <li>셀(Cells)</li>
+          </a>
+          <a href="#">
+            <li>바인딩</li>
+          </a>
+          <a href="#">
+            <li>딥 바인딩</li>
+          </a>
+          <a href="#">
+            <li>선택(Selection)</li>
+          </a>
+          <a href="#">
+            <li>페이징</li>
+          </a>
+          <a href="#">
+            <li>복사/붙혀넣기</li>
+          </a>
+          <a href="#">
+            <li>클립보드 금지</li>
+          </a>
+          <a href="#">
+            <li>사용자 병합</li>
+          </a>
+          <a href="#">
+            <li>제한된 병합</li>
+          </a>
+          <a href="#">
+            <li>트리 정렬</li>
+          </a>
+          <a href="#">
+            <li>Null값 핸들링</li>
+          </a>
+        </ul>
+      </ul>
+
+      <li data-toggle="collapse" data-target="#collectionview-main" class="collapsed">
+        컬렉션뷰 (CView)<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="collectionview-main">
+        <li data-toggle="collapse" data-target="#collectionview-getstart" class="collapsed">
+          시작하기<span class="arrow"></span>
+        </li>
+        <ul class="sub-menu2 collapse" id="collectionview-getstart">
+          <a [routerLink]="['flexgrid-filter']">
+            <li>초기화</li>
+          </a>
+          <a href="#">
+            <li>레코드 관리</li>
+          </a>
+          <a href="#">
+            <li>정렬</li>
+          </a>
+          <a href="#">
+            <li>필터링</li>
+          </a>
+          <a href="#">
+            <li>그룹핑</li>
+          </a>
+          <a href="#">
+            <li>편집</li>
+          </a>
+          <a href="#">
+            <li>페이징</li>
+          </a>
+          <a href="#">
+            <li>변경추적</li>
+          </a>
+        </ul>
+      </ul>
+
+      <li data-toggle="collapse" data-target="#flexchart-main" class="collapsed">
+        차트 (FlexChart)<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="flexchart-main">
+        <li data-toggle="collapse" data-target="#flexchart-getstart" class="collapsed">
+          시작하기<span class="arrow"></span>
+        </li>
+        <ul class="sub-menu2 collapse" id="flexchart-getstart">
+          <a [routerLink]="['flexgrid-filter']">
+            <li>초기화</li>
+          </a>
+          <a href="#">
+            <li>차트 타입</li>
+          </a>
+          <a href="#">
+            <li>깔때기 차트</li>
+          </a>
+          <a href="#">
+            <li>혼합 차트</li>
+          </a>
+          <a href="#">
+            <li>범례와 제목</li>
+          </a>
+          <a href="#">
+            <li>툴팁</li>
+          </a>
+          <a href="#">
+            <li>스타일링</li>
+          </a>
+          <a href="#">
+            <li>사용자정의 축</li>
+          </a>
+          <a href="#">
+            <li>테마적용</li>
+          </a>
+          <a href="#">
+            <li>선택모드</li>
+          </a>
+          <a href="#">
+            <li>시리즈 숨기기</li>
+          </a>
+          <a href="#">
+            <li>실시간 차트</li>
+          </a>
+        </ul>
+      </ul>
+
+      <li data-toggle="collapse" data-target="#flexpie-main" class="collapsed">
+        파이차트 (FlexPie)<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="flexpie-main">
+        <li data-toggle="collapse" data-target="#flexpie-getstart" class="collapsed">
+          시작하기<span class="arrow"></span>
+        </li>
+        <ul class="sub-menu2 collapse" id="flexpie-getstart">
+          <a [routerLink]="['flexgrid-filter']">
+            <li>초기화</li>
+          </a>
+          <a href="#">
+            <li>기본기능</li>
+          </a>
+          <a href="#">
+            <li>범례와 제목</li>
+          </a>
+          <a href="#">
+            <li>선택하기</li>
+          </a>
+          <a href="#">
+            <li>테마적용</li>
+          </a>
+        </ul>
+      </ul>
+
+
+      <li data-toggle="collapse" data-target="#gauge-main" class="collapsed">
+        게이지 (Gauge)<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="gauge-main">
+        <li data-toggle="collapse" data-target="#gauge-getstart" class="collapsed">
+          시작하기<span class="arrow"></span>
+        </li>
+        <ul class="sub-menu2 collapse" id="gauge-getstart">
+          <a [routerLink]="['flexgrid-filter']">
+            <li>초기화</li>
+          </a>
+          <a href="#">
+            <li>편집(슬라이더 게이지)</li>
+          </a>
+          <a href="#">
+            <li>포인터 보이기</li>
+          </a>
+          <a href="#">
+            <li>범위 설정</li>
+          </a>
+          <a href="#">
+            <li>레이아웃 및 모양</li>
+          </a>
+          <a href="#">
+            <li>텍스트 값 보이기</li>
+          </a>
+          <a href="#">
+            <li>스타일링</li>
+          </a>
+        </ul>
+      </ul>
+
+      <li data-toggle="collapse" data-target="#input-main" class="collapsed">
+        입력 (Input)<span class="arrow"></span>
+      </li>
+      <ul class="sub-menu collapse" id="input-main">
+        <li data-toggle="collapse" data-target="#input-getstart" class="collapsed">
+          시작하기<span class="arrow"></span>
+        </li>
+        <ul class="sub-menu2 collapse" id="input-getstart">
+          <a [routerLink]="['flexgrid-filter']">
+            <li>초기화</li>
+          </a>
+          <a href="#">
+            <li>자동완성</li>
+          </a>
+          <a href="#">
+            <li>콤보박스</li>
+          </a>
+          <a href="#">
+            <li>날짜 및 달력</li>
+          </a>
+          <a href="#">
+            <li>날짜시간 입력 컨트롤</li>
+          </a>
+          <a href="#">
+            <li>날짜입력/유효성 검사</li>
+          </a>
+          <a href="#">
+            <li>리스트 박스</li>
+          </a>
+          <a href="#">
+            <li>숫자 입력</li>
+          </a>
+          <a href="#">
+            <li>마스크 입력</li>
+          </a>
+          <a href="#">
+            <li>메뉴</li>
+          </a>
+          <a href="#">
+            <li>대화상자 및 팝업</li>
+          </a>
+          <a href="#">
+            <li>팝업/팝 오버</li>
+          </a>
+        </ul>
+      </ul>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner">
+      <div class="banner-button">   
+        <a href="http://cafe.naver.com/grapecity"  target="_blank" class="btn btn-info">기술지원</a>&nbsp;     
+        <a href="http://wijmo.com/5/docs/"  target="_blank" class="btn btn-warning">API</a>&nbsp;     
+        <a href="http://www.componentone.co.kr/downloads/default.htm#wijmo"  target="_blank" class="btn btn-success">Download</a>                     
+      </div>
+    </div>
+    <br>
+    <div class="col-md-10 col-md-offset-2 main">
+      <!--ddd-->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

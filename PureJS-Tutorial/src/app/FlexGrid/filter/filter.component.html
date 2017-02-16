@@ -1,41 +1,36 @@
-<div id="content" class="content ng-scope" role="main" ng-view="">
-    <h1 class="page-header">
-        FlexGrid 필터링/Filtering
-    </h1>
+<ul>
+    <li *ngFor='let tocs of toc' [attr.data-target]="'#' + tocs.header">
+        {{tocs.header}}<span class="arrow"></span>
+        <ul [attr.id]="tocs.header">
+            <li *ngFor='let item1 of tocs.items' [attr.data-target]="'#' + item1.header">
+                <div *ngIf='item1.items != null'>{{item1.header}}<span class="arrow"></span></div>
+                <div *ngIf='item1.items == null'><a [routerLink]="[item1.path]">{{item1.header}}</a><span class="arrow"></span></div>
+                <ul [attr.id]="item1.header" *ngIf='item1.items'>
+                    <li *ngFor='let item2 of item1.items'>
+                        <a href="">{{item2.header}}</a><span class="arrow"></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
 
-    
-    <p class="ng-scope">
-        As for the actual location of the files, you have two options. You may download Wijmo and copy the required files to the
-        appropriate folders within your application, or you may reference Wijmo files hosted in the cloud, on our Content
-        Delivery Network (CDN). The sections below show examples.</p>
-    <h3 class="ng-scope">
-        Deploying Wijmo locally</h3>
-    <p class="ng-scope">
-        Download the Wijmo files and copy them to a folder within your application. If you place the Wijmo script files in a folder
-        called "scripts/vendors," and the css files in a folder called "styles," you can add the following lines to your
-        HTML pages:</p>
-    <pre class="ng-scope hljs xml"><span class="hljs-comment">&lt;!-- Wijmo references (required) --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/controls/wijmo.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles/wijmo.min.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>/&gt;</span>
 
-<span class="hljs-comment">&lt;!-- Wijmo controls (optional, include the controls you need) --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/controls/wijmo.grid.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/controls/wijmo.chart.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/controls/wijmo.input.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/controls/wijmo.gauge.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<!--
+<ul *ngFor='let tocs of toc'>
+      <li [attr.data-target]="'#' + tocs.header">
+        {{tocs.header}}<span class="arrow"></span>
+        <ul *ngFor='let item1 of tocs.items' [attr.id]="tocs.header">
+            <li [attr.data-target]="'#' + item1.header">
+                {{item1.header}}<span class="arrow"></span>        
+                <ul *ngFor='let item2 of item1.items' [attr.id]="item1.header">
+                    <li>
+                        {{item2.header}}<span class="arrow"></span>        
+                    </li>
+                </ul>
+            </li>
+        </ul>
 
-<span class="hljs-comment">&lt;!-- Wijmo custom theme (optional, include the theme you like) --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles/themes/wijmo.theme.modern.min.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>/&gt;</span>
-
-<span class="hljs-comment">&lt;!-- Wijmo custom culture (optional, include the culture you want) --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/controls/cultures/wijmo.culture.ja.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-comment">&lt;!-- AngularJS and Wijmo directives (optional, use in AngularJS applications) --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/vendor/interop/angular/wijmo.angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</pre>
-
-<iframe height='757' scrolling='no' title='Flexgrid/Filter' src='//codepen.io/GrapeCity-Korea/embed/vgBzdq/?height=757&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/vgBzdq/'>Flexgrid/Filter</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
-</div>
+      </li>
+</ul>
+-->
