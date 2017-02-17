@@ -1,0 +1,69 @@
+<h1 class="page-header">
+  열 이동 / Column Move
+</h1>
+<p>
+  FlexGrid에는 기본적으로 사용자 원하는 열(Column)을 Drag&Drop으로 원하는 위치로 이동할 수 있습니다.</p>
+<p>
+  만약, 해당 열(Column) 이동 기능을 막고 싶다면, 아래와 같은 코드르 통해서 Disable 할 수 있습니다.</p>
+<pre class="hljs javascript">flexGrid.allowDragging = "None";</pre>
+
+<div class="member-panel enum">
+  <h3>Members</h3>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="identifier">None</span></td>
+        <td>0</td>
+        <td>
+          <p>사용자는 행이나 열을 이동할 수 없습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Columns</span></td>
+        <td>1</td>
+        <td>
+          <p>사용자는 열을 이동할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Rows</span></td>
+        <td>2</td>
+        <td>
+          <p>사용자는 행을 이동할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Both</span></td>
+        <td>Rows | Columns</td>
+        <td>
+          <p>사용자는 열과 행, 모두를 이동할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함께 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='680' scrolling='no' title='Flexgrid/열 이동' src='//codepen.io/GrapeCity-Korea/embed/PWYyKj/?height=680&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/PWYyKj/'>Flexgrid/열 이동</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
+
+ 

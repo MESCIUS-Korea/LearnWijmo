@@ -1,0 +1,96 @@
+<h1 class="page-header">
+  선택모드 | Selection
+</h1>
+<p>
+  기본적으로 <b>FlexGrid</b>를 사용하면 Excel과 마찬가지로 마우스 또는 키보드로 셀 범위를 선택할 수 있습니다.
+</p>
+<p>
+  <b>selectionMode</b> 속성을 사용하면 사용자가 행, 행 범위, 인접하지 않은 행, 단일 셀 또는 아무 것도 선택하지 못하도록 변경할 수 있습니다.
+</p>
+
+<div class="member-panel enum">
+  <h3>Members</h3>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="identifier">None</span></td>
+        <td>0</td>
+        <td>
+          사용자는 마우스 나 키보드를 사용하여 셀을 선택할 수 없습니다.
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Cell</span></td>
+        <td>1</td>
+        <td>
+          사용자는 한 번에 하나의 셀만 선택할 수 있습니다.
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">CellRange</span></td>
+        <td>2</td>
+        <td>
+          사용자는 인접한 셀 블록을 선택할 수 있습니다.
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Row</span></td>
+        <td>3</td>
+        <td>
+          사용자는 한 번에 한 행을 선택할 수 있습니다.
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">RowRange</span></td>
+        <td>4</td>
+        <td>
+          사용자는 인접한 행을 선택할 수 있습니다.
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">ListBox</span></td>
+        <td>5</td>
+        <td>
+          사용자는 인접하지 않은 행을 선택할 수 있습니다.
+        </td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  현재 <b>selectionMode</b>에 관계없이, 그리드는 선택이 변경되면 <b>selectionChanging</b> 및 <b>selectionChanged</b> 이벤트를 발생시킵니다. 
+  그리고 <b>selection</b> 속성을 사용하여 현재 선택을 가져 오거나 설정을 <b>CellRange 값</b>으로 설정할 수 있습니다. 
+<pre class="hljs css"><b>theGrid</b>.selection = <b>new</b> wijmo.grid.<font color="#dd1144"><b>CellRange(0, 0, 1, 1);</b></font></pre>
+
+
+<p>
+  <b>ListBox </b>모드에서 사용자는 <b>Ctrl + 클릭</b>을 사용하여 개별 행을 선택할 수 있으며 행의 <b>isSelected </b>속성을 사용하여 행이 선택되었는지 여부를 확인할 수 있습니다.
+</p>
+<pre class="hljs css">theGrid.rows[index].<font color="#dd1144"><b>isSelected</b></font> = true;</pre>
+
+<p>FlexGrid에는 빌트인 클립 보드 지원 기능이 있습니다. <b> ctrl + c </ b> 키를 눌러 현재 선택 항목을 클립 보드에 복사하십시오.</p>
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='680' scrolling='no' title='Flexgrid/HighlightSelection' src='//codepen.io/GrapeCity-Korea/embed/QdLVzg/?height=680&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/QdLVzg/'>Flexgrid/HighlightSelection</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>

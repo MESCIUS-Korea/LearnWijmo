@@ -1,0 +1,36 @@
+ <h1 class="page-header">
+    Clipboard Support
+  </h1>
+  <p>
+    FlexGrid에는 빌트인 클립 보드 지원 기능이 있습니다.</p>
+  <p>
+   기본적으로 ctrl + c 또는 ctrl + Insert 키를 누르면 현재 선택 항목이 클립 보드로 복사됩니다.<br/>
+   ctrl + v 또는 shift-Insert를 누르면 클립 보드 내용이 눈금에 붙여 넣어집니다.</p>
+
+   <iframe height='684' scrolling='no' title='FlexGrid/Copy&Paste' src='//codepen.io/GrapeCity-Korea/embed/qqzLdg/?height=684&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/qqzLdg/'>FlexGrid/Copy&Paste</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+   </iframe>
+  <p></p>
+  <p></p>
+  <hr>
+  <h3>클립보드 비활성</h3>  
+  <p></p>
+  
+  <b>autoClipboard</b> 속성을 false로 설정하여 자동 클립 보드 기능을 비활성화 할 수 있습니다.
+  <pre class="hljs javascript">flexGrid.autoClipboard = false;</pre>
+
+  <iframe height='680' scrolling='no' title='FlexGrid/클립보드 금지' src='//codepen.io/GrapeCity-Korea/embed/zoVyBm/?height=680&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/zoVyBm/'>FlexGrid/클립보드 금지</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
+<p></p>
+  <p></p>
+  <hr>
+  <h3>사용자 정의 클립보드</h3>  
+  <p></p>
+   <b>copying, copied, pasting, pasted, pastingCell</b> 및 <b>pastedCell</b> 이벤트를 사용하여 클립보드 동작을 사용자 정의 할 수 있습니다.<br>
+   예를 들어 아래의 그리드에서 범위를 복사하면 헤더(Header)가 함께 클립보드 내용에 추가됩니다.  
+  
+  <p></p>  
+
+<iframe height='680' scrolling='no' title='FlexGrid/헤더(Header) 복사' src='//codepen.io/GrapeCity-Korea/embed/WRWBLX/?height=680&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/WRWBLX/'>FlexGrid/헤더(Header) 복사</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>

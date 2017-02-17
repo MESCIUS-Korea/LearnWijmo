@@ -16,6 +16,13 @@ import { LesscssComponent } from './wijmo5-Info/lesscss/lesscss.component';
 
 import { FilterComponent } from './flexgrid/filter/filter.component';
 
+import { SelectionComponent } from './flexgrid/introduction/selection/selection.component';
+import { ClipboardComponent } from './flexgrid/introduction/clipboard/clipboard.component';
+
+
+//2. column
+import { ColumnMoveComponent } from './flexgrid/columns/column-move/column-move.component';
+
 
 const APP_ROUTES:Routes = [
     { path: '', component: OverviewComponent },  
@@ -29,7 +36,10 @@ const APP_ROUTES:Routes = [
     { path: 'glyphs', component: GlyphsComponent },
     { path: 'intellisense', component: IntellisenseComponent },    
     { path: 'lesscss', component: LesscssComponent },
-    { path: 'flexgrid-filter', component: FilterComponent },
+    { path: 'fg-filter', component: FilterComponent },
+    { path: 'fg-selection', component: SelectionComponent },
+    { path: 'fg-clipboard', component: ClipboardComponent },    
+    { path: 'fg-col-move', component: ColumnMoveComponent }    
 ];
 
 @NgModule({

@@ -17,6 +17,9 @@ import { GlobalizationComponent } from './wijmo5-Info/globalization/globalizatio
 import { GlyphsComponent } from './wijmo5-Info/glyphs/glyphs.component';
 import { IntellisenseComponent } from './wijmo5-Info/intellisense/intellisense.component';
 import { LesscssComponent } from './wijmo5-Info/lesscss/lesscss.component';
+import { SelectionComponent } from './flexgrid/introduction/selection/selection.component';
+import { ClipboardComponent } from './flexgrid/introduction/clipboard/clipboard.component';
+import { ColumnMoveComponent } from './flexgrid/columns/column-move/column-move.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { LesscssComponent } from './wijmo5-Info/lesscss/lesscss.component';
     GlobalizationComponent,
     GlyphsComponent,
     IntellisenseComponent,
-    LesscssComponent
+    LesscssComponent,
+    SelectionComponent,
+    ClipboardComponent,
+    ColumnMoveComponent
   ],
   imports: [
     BrowserModule,

@@ -83,20 +83,16 @@
           },
           {
             "header": "선택모드",
-            "path": ""
+            "path": "fg-selection"
           },
           {
             "header": "페이징",
             "path": ""
           },
           {
-            "header": "복사/붙혀넣기",
-            "path": ""
-          },
-          {
-            "header": "클립보드금지",
-            "path": ""
-          },
+            "header": "클립보드 (복사/붙혀넣기)",
+            "path": "fg-clipboard"
+          },          
           {
             "header": "셀병합",
             "path": ""
@@ -124,17 +120,9 @@
             "path": ""
           },
           {
-            "header": "열 삭제",
-            "path": ""
-          },
-          {
-            "header": "열 생성",
-            "path": ""
-          },
-          {
             "header": "열 이동",
-            "path": ""
-          },
+            "path": "fg-col-move"
+          },          
           {
             "header": "아이콘 컬럼",
             "path": ""
