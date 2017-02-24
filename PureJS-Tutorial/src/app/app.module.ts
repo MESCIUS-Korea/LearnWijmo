@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReferencingComponent } from './wijmo5-Info/referencing/referencing.component';
 import { OverviewComponent } from './wijmo5-Info/overview/overview.component';
-import { FilterComponent } from './flexgrid/filter/filter.component';
 import { Ng1DirectiveComponent } from './wijmo5-Info/ng1-directive/ng1-directive.component';
 import { SizingStyleComponent } from './wijmo5-Info/sizing-style/sizing-style.component';
 import { PsesudoComponent } from './wijmo5-Info/psesudo/psesudo.component';
@@ -20,13 +19,22 @@ import { LesscssComponent } from './wijmo5-Info/lesscss/lesscss.component';
 import { SelectionComponent } from './flexgrid/introduction/selection/selection.component';
 import { ClipboardComponent } from './flexgrid/introduction/clipboard/clipboard.component';
 import { ColumnMoveComponent } from './flexgrid/columns/column-move/column-move.component';
+import { SortingComponent } from './flexgrid/columns/sorting/sorting.component';
+import { SizingComponent } from './flexgrid/columns/sizing/sizing.component';
+import { LayoutComponent } from './flexgrid/columns/layout/layout.component';
+import { FreezingComponent } from './flexgrid/columns/freezing/freezing.component';
+import { FilteringComponent } from './flexgrid/columns/filtering/filtering.component';
+import { GroupingComponent } from './flexgrid/columns/grouping/grouping.component';
+import { AddDeleteComponent } from './flexgrid/rows/add-delete/add-delete.component';
+import { RowMoveComponent } from './flexgrid/rows/row-move/row-move.component';
+import { DetailRowComponent } from './flexgrid/rows/detail-row/detail-row.component';
+import { HeaderMergeComponent } from './flexgrid/header/header-merge/header-merge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReferencingComponent,
-    OverviewComponent,
-    FilterComponent,
+    OverviewComponent,   
     Ng1DirectiveComponent,
     SizingStyleComponent,
     PsesudoComponent,
@@ -38,7 +46,17 @@ import { ColumnMoveComponent } from './flexgrid/columns/column-move/column-move.
     LesscssComponent,
     SelectionComponent,
     ClipboardComponent,
-    ColumnMoveComponent
+    ColumnMoveComponent,
+    SortingComponent,
+    SizingComponent,
+    LayoutComponent,
+    FreezingComponent,
+    FilteringComponent,
+    GroupingComponent,
+    AddDeleteComponent,
+    RowMoveComponent,
+    DetailRowComponent,
+    HeaderMergeComponent
   ],
   imports: [
     BrowserModule,

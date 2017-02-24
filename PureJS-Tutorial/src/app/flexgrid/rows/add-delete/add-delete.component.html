@@ -1,0 +1,39 @@
+<h1 class="page-header">
+  행 추가/삭제 | Adding and Removing Rows
+</h1>
+<p>
+  FlexGrid에서는 자체적으로 그리드에 행을 추가하거나 제거하는 기능을 제공하여 드리고 있습니다. <br> 그렇기 떄문에, 개발자는 별도의 코딩 없이도 기본 삭제/추가 기능을 사용할 수 있습니다.
+</p>
+<p>런타임에 사용자가 행을 추가하거나 제거할 수 있게 하려면 다음의 속성 정보를 설정하십시오:</p>
+<ul>
+  <li>
+    <b>allowAddNew</b>:<br> 이 속성을 true로 설정하면 그리드 아래쪽에 <code><b>새로운 행 추가 '템플릿'</b></code>이 표시됩니다. 사용자는 새 행 템플리트의 셀을 채워 <b>itemsSource</b>에
+    새로운 행을 추가 할 수 있습니다.
+  </li>
+  <li>
+    <b>allowRemove</b>:<br> 이 속성을 true로 설정하면 그리드가 키보드의 'Delete'키를 처리하고 선택된 행을 제거합니다. 사용자는 행 머리글을 클릭하여 행을 선택한 다음, <code><b>'Delete'키</b></code>를
+    눌러 <b>itemsSource</b> 배열에서 바인딩된 항목을 제거 할 수 있습니다.
+  </li>
+  <pre class="hljs javascript">  var flexGrid = new wijmo.grid.FlexGrid('#flexGrid', &#123;
+    itemsSource: data,
+    <span class="hljs-doctag">allowAddNew: true,
+    allowDelete: true,
+  </span>&#125;);
+</pre>
+  <li>
+    <b>newRowAtTop</b>:<br> 이 속성을 true로 설정하면 그리드의 아래쪽이 아닌 그리드의 <b>위쪽</b>에 새 행 '템플릿'이 표시됩니다.
+    <pre class="hljs javascript">flexGrid.newRowAtTop = true;</pre>
+  </li>
+</ul>
+
+<p></p>
+<h4><b> 샘플코드: </b></h4>
+<p>아래 샘플은 어떻게 FlexGrid가 작동하는지 보여줍니다:</p>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+
+<iframe height='630' scrolling='no' title='FlexGrid - 기본 Row 추가/삭제 기능' src='//codepen.io/GrapeCity-Korea/embed/LbKMeP/?height=630&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/LbKMeP/'>FlexGrid - 기본 Row 추가/삭제 기능</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+  <p></p>
+  <p></p>
+  

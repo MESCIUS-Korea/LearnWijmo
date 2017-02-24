@@ -136,57 +136,37 @@
             "path": ""
           },
           {
-            "header": "정렬 허용",
-            "path": ""
-          },
+            "header": "정렬(sorting) 허용/금지",
+            "path": "fg-sorting"
+          },          
           {
-            "header": "정렬 금지",
-            "path": ""
-          },
-          {
-            "header": "크기변경",
-            "path": ""
-          },
-          {
-            "header": "크기변경 금지",
-            "path": ""
-          },
+            "header": "크기변경 (Sizing)",
+            "path": "fg-sizing"
+          },          
           {
             "header": "순서 재정의",
             "path": ""
           },
           {
-            "header": "열 레이아웃",
-            "path": ""
+            "header": "레이아웃 저장",
+            "path": "fg-layout"
           },
           {
-            "header": "열 고정",
-            "path": ""
+            "header": "열 고정 (Frozen)",
+            "path": "fg-freezing"
           },
           {
             "header": "Sticky 헤더",
             "path": ""
           },
           {
-            "header": "필터링",
-            "path": ""
+            "header": "필터링 (Filter)",
+            "path": "fg-filtering"
           },
           {
-            "header": "그룹핑",
-            "path": ""
-          },
-          {
-            "header": "사용자 그룹핑",
-            "path": ""
-          },
-          {
-            "header": "사용자 그룹핑",
-            "path": ""
-          },
-          {
-            "header": "그룹 접기/축소",
-            "path": ""
-          },
+            "header": "그룹핑 (Grouping)",
+            "path": "fg-grouping"
+          },         
           {
             "header": "상단 Aggregates",
             "path": ""
@@ -222,20 +202,20 @@
             "path": ""
           },
           {
-            "header": "행 추가",
-            "path": ""
+            "header": "행 추가/삭제",
+            "path": "fg-rw-add-delete"
           },
           {
             "header": "행 이동",
-            "path": ""
+            "path": "fg-rw-move"
           },
           {
-            "header": "행 고정",
-            "path": ""
+            "header": "행 고정 (Frozen)",
+            "path": "fg-freezing"
           },
           {
-            "header": "상세보기 행",
-            "path": ""
+            "header": "상세보기 행 (DetailRow)",
+            "path": "fg-rw-deailRow"
           },
           {
             "header": "대체행 스타일",
@@ -264,8 +244,8 @@
             "path": ""
           },
           {
-            "header": "header 병합",
-            "path": ""
+            "header": "header 병합 (merge)",
+            "path": "fg-hd-merge"
           },
           {
             "header": "header 세로병합",

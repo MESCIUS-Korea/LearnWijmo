@@ -1,0 +1,87 @@
+<h1 class="page-header">
+  그룹핑 | Grouping
+</h1>
+<p>
+  여러분은 FlexGrid에서 여러가지 방법으로 데이터를 그룹화 할 수 있습니다.</p>
+
+<hr>
+<h3>기본 CollectionView 그룹핑 - 속성 값 이용</h3>
+<br>
+<p>
+  그리드의 collectionView.groupDescriptions 속성을 설정하여, 그리드 초기화 시에 하나 이상의 속성으로 데이터를 그룹화 할 수 있습니다.<br> 이것은 쉽게 할 수 있지만 특정 종류의 그룹화 UI를 원한다면 직접
+  구현해야합니다.
+</p>
+
+<pre class="hljs javascript"><span class="hljs-literal">  // 그리드 초기화 및 그룹핑 초기화</span>
+   var flexGrid = new wijmo.grid.FlexGrid('#flexGrid', &#123;
+   itemsSource: new wijmo.collections.CollectionView(data, &#123;
+   <span class="hljs-doctag">groupDescriptions: [
+                         'country',
+                         'product'
+                       ]
+     &#125;)</span>
+   &#125;);</pre>
+<br>
+<h4><strong>샘플코드:</strong></h4>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+
+<iframe height='650' scrolling='no' title='Flexgrid/Grouping - 속성 값' src='//codepen.io/GrapeCity-Korea/embed/xgKyKB/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true'
+  frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/xgKyKB/'>Flexgrid/Grouping - 속성 값</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>)
+  on <a href='http://codepen.io'>CodePen</a>.
+  </iframe>
+  <p></p>
+  <p></p>
+
+
+<hr>
+<h3>기본 CollectionView 그룹핑 - 함수 이용</h3>
+<br>
+<p>
+  그리드의 <b>collectionView.groupDescriptions.push()</b> 함수를 통해, 그리드 초기화 이후에, 사용자가 원하는 방식으로 그룹을 재설정 할 수 있습니다.  
+</p>
+
+<pre class="hljs javascript">  <span class="hljs-literal">//County 그룹 디스크립션 설정</span>
+  cv.groupDescriptions.push(new wijmo.collections.PropertyGroupDescription('country'));
+
+  <span class="hljs-literal">//Product 그룹 디스크립션 설정</span>
+  cv.groupDescriptions.push(new wijmo.collections.PropertyGroupDescription('product'));
+</pre>
+<br>
+<h4><strong>샘플코드:</strong></h4>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='Flexgrid/Grouping - 함수' src='//codepen.io/GrapeCity-Korea/embed/EZBEQz/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/EZBEQz/'>Flexgrid/Grouping - 함수</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+<hr>
+<h3>기본 CollectionView 그룹핑 - 그룹패널 사용</h3>
+<br>
+<p>
+  Wijmo의 <b> wijmo.grid.grouppanel</b>은  <b>GroupPanel(그룹패널)</b> 컨트롤을 제공해줍니다.
+  <br> 이를 통해, 사용자는 그룹패널에 헤더를 드래그해 놓는 것 만으로도 손쉽게 그룹핑을 할 수 있습니다. 
+</p>
+<p>
+  FlexGrid의 그룹패널(GroupPanel)을 적용하기 위해서는 <code>wijmo.grid.grouppanel.min.js</code> 파일을 header에 선언해야 합니다.   
+</p>  
+<pre class="hljs javascript">&lt;script src="scripts/vendor/controls/<span class="hljs-doctag">wijmo.grid.grouppanel.min.js</span>"&gt;&lt;/script&gt;
+</pre>
+<p>GroupPanel 컨트롤을 사용하려면 열 헤더를 패널로 드래그하여 그룹을 만듭니다. 그룹을 새 위치로 드래그하거나 그룹을 제거 할 수도 있습니다.</p>
+<br>
+<h4><strong>샘플코드:</strong></h4>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='Flexgrid/Grouping - 그룹 패널' src='//codepen.io/GrapeCity-Korea/embed/VPJXGj/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/VPJXGj/'>Flexgrid/Grouping - 그룹 패널</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
+<hr>
+<h3>사용자 정의 그룹헤더</h3>
+<br>
+<p>
+  FlexGrid의 groupHeaderFormat의 속성을 변경하여, 사용자가 보여주고 싶은 형식으로 그룹헤더를 정의할 수 있습니다.  
+</p>
+<pre class="hljs javascript">flexGrid.groupHeaderFormat = '&#123;name&#125;: &#123;value&#125;';</pre>
+<br>
+<h4><strong>샘플코드:</strong></h4>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<p>예제에서는 그룹별 합산을 그룹헤더에 보여 줍니다.</p>
+<iframe height='650' scrolling='no' title='Flexgrid/CustomGropHeader(Grouping)' src='//codepen.io/GrapeCity-Korea/embed/mRbzJP/?height=650&theme-id=light&default-tab=result,js&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/mRbzJP/'>Flexgrid/CustomGropHeader(Grouping)</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>

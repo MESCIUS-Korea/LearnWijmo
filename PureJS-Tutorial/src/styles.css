@@ -2,8 +2,14 @@
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 300;
-  src: local('Nanum Gothic'), local('NanumGothic-Regular'), url(./assets/fonts/NanumGothic-Regular.ttf) format('ttf');
+  src: local('Nanum Gothic'), local('NanumGothic-Regular')
+  , url(./assets/fonts/NanumGothic-Regular.ttf) format('ttf')
+  , url(./assets/fonts/NanumGothic.eot) format('eot')
+  , url(./assets/fonts/NanumGothic.woff) format('woff')
+  ;
 }
+
+
 
 .nav-side-menu {
   overflow-x: hidden;  

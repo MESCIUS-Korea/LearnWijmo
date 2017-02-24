@@ -1,0 +1,38 @@
+ <h1 class="page-header">
+    크기변경 | Sizing
+  </h1>
+  <p>
+    그리드를 생성할때 사용자가 원하는 열 너비를 설정할 수 있습니다. 이후에는 사용자가 마우스를 사용하여 자유자제로 열의 너비를 조정할 수 있습니다.<br>
+    Excel에서과 마찬가지로 열 헤더의 가장자리에서 드래그 하거나, 가장자리를 두 번 클릭하여 내용에 맞게 자동 크기를 조정할 수 있습니다.</p>
+  <p>
+   사용자가 열의 크기를 조정하지 못하도록하려면, <b>그리드의 allowResizing 속성을 'None'</b>으로 설정하거나, <b>열의 allowResizing 속성을 'false'</b>로 설정하여 특정 열의 크기를 조정하지 못하게 할 수 있습니다.
+  </p>
+
+  <pre class="hljs javascript">var flexgrid = new wijmo.grid.FlexGrid('#flexgrid', &#123;
+  deferResizing: true, <span class="hljs-literal">// show just a marker while resizing</span>
+  autoGenerateColumns: false,
+  columns:[
+  &#123; binding: 'id', header: 'ID', <span class="hljs-doctag">width: 60, allowResizing: false </span> &#125;,
+    .
+    .
+    .
+  ],
+  itemsSource: data
+  &#125;);
+</pre>
+
+<pre class="hljs javascript">
+<span class="hljs-literal">// 행렬의 크기 변경을 금지합니다.</span>
+flexGrid.allowResizing = wijmo.grid.AllowResizing.None;
+</pre>
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<p>  
+  아래의 그리드 예제서는 'ID'열의 크기를 조정할 수 없지만, 다른 열의 크기를 조정하고 크기를 자동 조정할 수 있습니다.
+</p>
+<iframe height='680' scrolling='no' title='FlexGrid/ColumnSize 변경' src='//codepen.io/GrapeCity-Korea/embed/zoVyom/?height=680&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/zoVyom/'>FlexGrid/ColumnSize 변경</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+  <p></p>
+  <p></p> 

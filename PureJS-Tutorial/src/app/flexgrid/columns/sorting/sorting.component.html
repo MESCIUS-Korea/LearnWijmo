@@ -1,0 +1,29 @@
+ <h1 class="page-header">
+    정렬 | Sorting
+  </h1>
+  <p>
+    그리드는 CollectionView 데이터 소스를 통해 정렬을 지원합니다.</p>
+  <p>
+   기본적으로 모든 열 머리글을 클릭하면 클릭 한 열을 기반으로 데이터가 정렬됩니다. 
+   같은 열 머리글을 다시 클릭하면 정렬 순서가 바뀝니다.<br>
+   <b>Ctrl 키를 누른 상태에서 열 머리글을 클릭하면 정렬이 제거</b>됩니다.
+  </p>
+
+<p>
+  그리드의 <b>showSort</b> 및 <b>allowSorting</b> 속성을 사용하여 정렬 비헤이비어를 사용자 정의 할 수 있습니다. <br>
+  열의 <b>allowSorting 속성</b>을 <b>false</b>로 설정하여 특정 열의 <b>정렬을 비활성화</b> 할 수 있습니다
+</p>
+<pre class="hljs javascript">flexGrid.allowSorting = false;</pre>
+
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<p>   
+ 아래의 그리드 예제는 'ID'로 정렬 할 수 없지만, 다른 모든 열은 정렬할 수 있도록 만들어 졌습니다.
+</p>
+
+  <iframe height='680' scrolling='no' title='Flexgrid/Sort허용' src='//codepen.io/GrapeCity-Korea/embed/ggYdGO/?height=680&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/ggYdGO/'>Flexgrid/Sort허용</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+  </iframe>
+  <p></p>
+  <p></p> 
