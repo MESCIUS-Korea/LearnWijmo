@@ -1,0 +1,31 @@
+<h1 class="page-header">
+  추적 | Tracking
+</h1>
+<p>
+  <b>CollectionView</b> 클래스는 데이터의 <b>변경 내용을 추적</b> 할 수 있습니다.   
+</p>
+<p>
+  이는 서버에 변경 사항을 제출해야하는 상황에서 유용합니다. 변경 내용 추적을 설정하려면 <b>trackChanges</b> 속성을 <b>true</b>로 설정합니다. 
+  일단 그렇게하면 <b>CollectionView</b>는 데이터에 대한 모든 변경 사항을 추적하여 <b>세 가지 배열</b>로 저장합니다.
+</p>
+<ul>
+  <li>
+    <b>itemsEdited</b> :이 목록에는 <b>beginEdit</b> 및 <b>commitEdit</b> 메소드를 사용하여 편집되는 항목이 들어 있습니다.
+  </li>
+  <li>
+    <b>itemsAddedM</b> :이 목록에는 <b>addNew</b> 및 <b>commitNew</b> 메소드를 사용하여 추가 된 항목이 들어 있습니다.
+  </li>
+  <li>
+    <b>itemsRemoved</b> :이 목록에는 <b>remove</b> 메소드를 사용하여 제거 된 항목이 들어 있습니다.
+  </li>
+</ul>
+<p>  
+ 이 기능은 FlexGrid를 사용하여 아래에서 설명합니다. 그리드는 trackChanges가 true로 설정된 CollectionView에 바인딩됩니다.
+</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='CollectionView/Tracking changes' src='//codepen.io/GrapeCity-Korea/embed/GrWrRm/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/GrWrRm/'>CollectionView/Tracking changes</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

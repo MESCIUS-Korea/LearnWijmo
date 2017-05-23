@@ -1,0 +1,26 @@
+<h1 class="page-header">
+  가상화 | Virtualization
+</h1>
+<p>
+  <b>FlexGrid</b>의 주된 업무는 <b>JavaScript 데이터 객체</b>를 사용자가 상호 작용할 수있는 <b>DOM 요소로 변환</b>하는 것입니다. 
+  대부분의 경우 데이터는 수천 개의 항목이있는 대규모 배열로 구성됩니다. 
+  <br>이러한 항목 각각에 대해 DOM 요소를 작성하면 크고 느린 페이지를 만들 수 있습니다.
+</p>  
+<p>
+  <b>가상화(Virtualization)</b>는 데이터의 어느 부분을 볼 수 있는지 추적하고 해당 부분 만 렌더링하는 프로세스입니다.
+  이렇게 하면 문서 트리에서 DOM 요소 수가 줄어들고 <b>성능이 크게 향상</b>됩니다.
+</p>
+<p>
+  FlexGrid는 <b>viewRange</b> 속성을 통해 데이터의 보이는 부분을 노출합니다. 
+  <b>사용자가 화면의 크기를 조정하거나 그리드를 스크롤 할 때마다 viewRange가 업데이트되고 그리드가 해당 자식 DOM 요소를 업데이트합니다.</b>
+</p>
+<p>  
+ 아래 샘플에서는 viewRange 속성을 사용하여 간단한 유형의 '무한 스크롤'을 구현합니다.사용자가 그리드의 맨 아래로 스크롤하면 코드는 그리드의 itemsSource에 항목을 추가합니다.
+</p>
+<p>  
+ DOM을 검사하면 itemsSource의 크기에 관계없이 <b>DOM 요소 수가 일정</b>하다는 것을 알 수 있습니다. 데이터는 '가상화'됩니다.
+</p>
+<iframe height='650' scrolling='no' title='FlexGrid - 가상화 | Virtualization' src='//codepen.io/GrapeCity-Korea/embed/RpaxWM/?height=650&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/RpaxWM/'>FlexGrid - 가상화 | Virtualization</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

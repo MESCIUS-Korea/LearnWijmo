@@ -1,0 +1,29 @@
+<h1 class="page-header">
+  행 스타일 | Row Styling
+</h1>
+<p>
+  기본적으로 그리드는 모든 다른 행에 'wj-alt'클래스를 추가하고 'wijmo.css'파일은이 클래스를 사용하여 행을 번갈아 스타일을 지정합니다.
+  사용자 정의 CSS를 사용하여이를 비활성화 할 수 있지만 행 스타일을 전혀 적용하지 않으려면 격자의 <b> showAlternatingRows </b> 속성을 false로 설정하는 것이 더 쉽습니다.</p>
+<p>
+  FlexGrid는 데이터 정렬, 필터링, 그룹화 또는 편집시 발생하는 데이터 소스가 refresh 될 때마다 행을 다시 생성합니다.
+  이 때문에, 대부분의 경우에서 행 속성이 값을 유지할 것으로 예상해서는 안됩니다.
+</p>
+<p>
+  행에 사용자 정의 스타일을 적용하려면 그리드에서 행을 다시 생성 할 때마다 발생하는 <b> loadedRows </b>이벤트가 발생할 때 이 작업을 수행해야합니다.</p>
+<p>
+  스타일에 영향을 미치는 행 속성은 다음과 같습니다.</p>
+<ul>
+  <li>
+    <b> cssClass </b> :이 행의 셀에 추가 할 클래스 이름을 지정합니다. 클래스 이름은 CSS 규칙에서 이 행의 셀 스타일을 수정하는 데 사용할 수 있습니다.</li>
+  <li>
+    <b> height </b> : 행의 높이 (픽셀 단위)입니다.</li>
+</ul>
+<p>
+  아래 샘플은 그리드의 <b> showAlternatingRows </b> 및 행의 <b> cssClass </b> 속성의 효과를 보여줍니다.</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/Rows/Styling' src='//codepen.io/GrapeCity-Korea/embed/MpGvrX/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/MpGvrX/'>FlexGrid/Rows/Styling</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

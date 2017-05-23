@@ -1,0 +1,28 @@
+<h1 class="page-header">
+  엑셀 가져오기/내보내기 | Excel Import/Export
+</h1>
+<p>
+  FlexGrid 컨트롤을 XLSX 형식으로 내보내려면 응용 프로그램에 세 개의 추가 모듈을 포함해야합니다.</p>
+<ol>
+  <li>
+    <b>wijmo.xlsx.js</b>: XLSX 파일을 저장하고 로드하는 일반적인 방법을 제공합니다.</li>
+  <li>
+    <b>wijmo.grid.xlsx.js</b>:
+    <b> wijmo.xlsx.js </b>를 사용하여 FlexGrid 컨트롤을 XLSX로 저장하거나 XLSX 파일을 FlexGrid 컨트롤로 로드하는 <b>FlexGridXlsxConverter</b> 클래스가
+    있습니다.
+  </li>
+  <li><b><a href="https://stuk.github.io/jszip/" target="_blank">jszip.js</a></b>: ZIP 파일 생성, 읽기 및 편집을위한 Javascript 라이브러리.
+  </li>
+</ol>
+<p>
+  FlexGrid를 XLSX로 내보내려면 <b> FlexGridXlsxConverter.save </b> 메서드를 호출하여 'book'객체를 가져옵니다. 예를 들어 시트를 추가하거나 이름을 변경하여 책 오브젝트를 저장하기
+  전에 수정할 수 있습니다. 'book'이 준비되면 <b> 저장 </b> 메소드를 호출하여 XLSX 파일을 만듭니다.</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/IO/Export to XLSX' src='//codepen.io/GrapeCity-Korea/embed/qrxbrb/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true'  frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/qrxbrb/'>FlexGrid/IO/Export to XLSX</a> by GrapeCity Korea (
+  <a
+    href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

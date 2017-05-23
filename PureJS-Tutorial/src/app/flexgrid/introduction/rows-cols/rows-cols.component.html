@@ -1,0 +1,55 @@
+<h1 class="page-header">
+  행과 열 | Rows	&amp; Columns
+</h1>
+<p>
+  FlexGrid은 6개의 <a href="http://wijmo.com/5/docs/topic/wijmo.grid.GridPanel.Class.html" target="_blank">GridPanel</a>요소로 이루어저 있습니다:
+</p>  
+<p>
+  각 패널에는 행과 열의 모음이 있습니다. 행과 열에는 각 패널의 각 셀에 표시 할 내용을 정의하는 속성이 있습니다.
+</p>
+<p>
+  특히 Row 객체에는 행이 바인딩되는 객체를 결정하는 dataItem 속성이 있고 Column 객체에는 셀에 표시되어야하는 데이터 항목의 속성을 결정하는 바인딩 속성이 있습니다.
+</p>
+<p>  
+ 대부분의 경우 셀 패널의 행 및 열 컬렉션을 참조하는 그리드의 행 및 열 속성을 사용하면됩니다.
+</p>
+<p>  
+ 그러나, 다중 행 열 머리글, 다중 열 행 머리글을 만들거나 그룹 바닥 글 패널에 행을 추가하기 위한 경우과 같이, 특정 패널에 속성이 필요할 상황이 있습니다.
+</p>
+<p>
+행과 열의 컬렉션은 다음과 같이 패널에 의해 공유됩니다.
+</p>  
+
+<p></p>
+<p></p>
+<b>Header Columns</b> : 그리드 왼쪽에있는 세 개의 패널은 'header'열의 모음을 공유합니다.
+<pre class="hljs javascript">// header columns on the left of the grid
+grid.topLeftCells.columns ==
+grid.rowHeaders.columns ==
+grid.bottomLeftCells.columns;
+</pre>
+<b>Scrollable Columns</b> : 그리드 오른쪽에있는 세 개의 패널은 'scrollable'열의 모음을 공유합니다.
+<pre class="hljs javascript">// scrollable columns on the right of the grid
+grid.columnHeaders.columns ==
+grid.cells.columns ==
+grid.columnFooters.columns ==
+grid.columns; // ** default columns collection
+</pre>
+<b>Header Rows</b> : 그리드 상단의 두 개의 패널은 'header'행 모음을 공유합니다.
+<pre class="hljs javascript">// header rows along the top of the grid
+grid.topLeftCells.rows ==
+grid.columnHeaders.rows;
+</pre>
+<b>Scrollable Rows</b> : 그리드 중간에있는 두 개의 패널은 'scrollable'행 모음을 공유합니다.
+<pre class="hljs javascript">// scrollable rows along the middle of the grid
+grid.rowHeaders.rows ==
+grid.cells.rows ==
+grid.rows; // ** default rows collection 
+</pre>
+<b>Footer Rows</b> : 그리드 하단의 두 패널은 'footer'행 모음을 공유합니다.
+<pre class="hljs javascript">/// footer rows along the bottom of the grid
+grid.bottomLeftCells.rows ==
+grid.columnFooters.rows;
+</pre>
+<p></p>
+<p></p>

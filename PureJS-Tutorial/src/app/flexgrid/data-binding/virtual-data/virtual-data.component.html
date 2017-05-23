@@ -1,0 +1,17 @@
+<h1 class="page-header">
+  OData와 가상 데이터 | OData and Virtual Data
+</h1>
+<p>
+  <b> ODataCollectionView </b> 클래스는 컨트롤을 OData 소스에 연결하는 간단한 방법을 제공합니다. <b> ODataCollectionView </b>를 만들면 소스에서 데이터로드가 시작됩니다.</p>
+<p>
+  <b> on-demand </b> 데이터로드를 제공하기 위해 <b> ODataVirtualCollectionView </b>가 <b> ODataCollectionView </b>를 확장합니다. 서버의 데이터를 자동으로로드하지
+  않습니다. 대신 요청시 <b> setWindow</b> 메서드를 사용하여 데이터 조각 (윈도우)을로드합니다.</p>
+<p>
+  아래의 그리드는 두 클래스가 어떻게 작동하는지 보여줍니다. 왼쪽 그리드에 점진적으로로드되는 데이터가 표시되는 것에 주목하십시오. 오른쪽의 표에는 전체 레코드 수가 즉시 표시되지만 아래로 스크롤전엔 데이터가로드되지 않습니다.</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/DataBinding/OData and Virtual Data' src='//codepen.io/GrapeCity-Korea/embed/NpYzJQ/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/NpYzJQ/'>FlexGrid/DataBinding/OData and Virtual Data</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

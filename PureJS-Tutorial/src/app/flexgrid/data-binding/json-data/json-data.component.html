@@ -1,0 +1,36 @@
+<h1 class="page-header">
+  JSON Date 변환 | Loading JSON Date
+</h1>
+<p>
+  JSON은 데이터를 직렬화하는 데 적합한 형식이지만 유감스럽게도 날짜는 지원하지 않습니다..</p>
+
+<h3>
+  <b>The Problem : 문제점</b>
+</h3>
+<p></p>
+<p>
+  <b>JSON.stringify</b>를 사용하여 날짜 필드가있는 객체를 직렬화하면 날짜가 문자열로 변환됩니다. 그런 다음 <b>JSON.parse</b>를 사용하여 동일한 객체를 구문 분석하면 문자열로 유지됩니다.</p>
+<p>
+  다음은 "날짜"열에 문자열이 포함 된 예입니다:
+</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/DataBinding/Json date - bad' src='//codepen.io/GrapeCity-Korea/embed/bqvvXg/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/bqvvXg/'>FlexGrid/DataBinding/Json date - bad</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>
+<h3>
+  <b>The Solution: 해결방법</b>
+</h3>
+<p></p>
+<p>
+  이 문제에 대한 해결책은 JSON.parse 호출에서 'reviver'함수를 사용하여 문자열을 검사하고 날짜와 같은 문자열을 날짜 오브젝트로 변환하는 것입니다.</p>
+<p>
+  이번에는 데이터 'reviver' 기능으로 파싱 된 동일한 데이터를 보여주는 표가 있습니다:</p>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/DataBinding/Json date - good' src='//codepen.io/GrapeCity-Korea/embed/oZPVXb/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/oZPVXb/'>FlexGrid/DataBinding/Json date - good</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

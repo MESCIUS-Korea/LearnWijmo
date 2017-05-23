@@ -1,0 +1,32 @@
+<h1 class="page-header">
+  행 컬렉션 | Row Collections
+</h1>
+<p>
+  <b>FlexGrid</b> 컨트롤에는 세 개의 <b>행(Row)</b> 집합이 있습니다.
+</p>
+<ul>
+  <li>
+    <b>Header Rows:</b> 이 모음에는 상단 행 집합이 들어 있습니다. topLeftCells 및 columnHeaders 패널에서 사용됩니다. 기본적으로이 컬렉션에는 행이 하나 있습니다.
+  </li>
+  <li>
+    <b>Rows:</b> 이 컬렉션에는 주요 행 집합이 포함됩니다. 셀 및 rowHeaders 패널에서 사용됩니다. 기본적으로이 컬렉션에는 행이 없습니다. 그리드의 itemsSource 속성을 설정하면 채워집니다.
+  </li>
+  <li>
+    <b>Footer Rows:</b> 이 모음에는 아래쪽 행 집합이 들어 있습니다. bottomLeftCells 및 columnFooters 패널에서 사용됩니다. 기본적으로이 컬렉션은 비어 있습니다.
+  </li>
+</ul>
+<p> 
+  세 개의 행 컬렉션은 일반 배열을 확장하는 <b>RowCollection</b> 객체입니다.
+  이러한 배열에서 <b>Row 객체</b>를 추가하거나 제거하여 행을 추가하거나 제거 할 수 있습니다. 
+  그러나 대부분의 경우 <b>itemsSource</b> 속성을 설정할 때 그리드에서 자동으로 수행하므로 스크롤 가능한 행을 추가하거나 제거할 필요가 없습니다.
+</p>
+<p>
+  예를 들어, 아래의 그리드에는 추가 고정 행과 자동 생성된 스크롤 가능한 행이 있습니다.
+</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/Rows' src='//codepen.io/GrapeCity-Korea/embed/QpKRJN/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/QpKRJN/'>FlexGrid/Rows</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

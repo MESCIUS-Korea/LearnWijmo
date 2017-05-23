@@ -1,0 +1,26 @@
+<h1 class="page-header">
+  필터 최적화 | Filter Optimizations
+</h1>
+<p>
+  <b> wijmo.grid.filter </b> 모듈은 Excel 스타일의 필터링 UI를 각 열에 추가하는 <b> FlexGridFilter </b> 클래스를 제공합니다.<b> FlexGridFilter </b>는
+  <b> value </b> 및 <b> condition </b>의 두 가지 유형의 필터를 제공합니다.</p>
+<p>
+  <b> value </b> 필터 편집기에는 사용자가 선택할 수있는 고유 한 값 목록이 포함되어 있습니다. 그리드에 많은 양의 데이터가 포함되어 있으면 이 고유한 값 목록을 생성하는 데 시간이 걸릴 수 있습니다.
+   또한 목록에 너무 많은 값이 포함되어 있으면 매우 유용하지 않습니다 (이러한 경우 조건 필터가 더 적합 할 수 있음)</p>
+<p>
+  이 샘플은 세 가지 방법으로 <b> value</b> 필터를 최적화하는 방법을 보여줍니다.</p>
+<ol>
+  <li>
+    <b> uniqueValues </b> :'Rating'열 필터는 열에서 가능한 고유 값 목록을 지정하므로 필터는 목록을 작성하기 위해 데이터를 검사할 필요가 없습니다.</li>
+  <li>
+    <b> maxValues </b> :'Sales'열 필터는 목록에 최대 20 개의 값만 표시되도록 지정합니다. 편집기에서 필터 필드를 사용하여 관심있는 값을 선택할 수 있습니다.</li>
+  <li>
+    <b> filterType </b> :'Expenses'열 필터에는 <b> 조건(Condition) </b> 필터 타입을 지정합니다. 이 열에는 값 필터가 표시되지 않습니다.</li>
+</ol>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/Filter Optimizations' src='//codepen.io/GrapeCity-Korea/embed/VpxyRa/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/VpxyRa/'>FlexGrid/Filter Optimizations</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

@@ -1,0 +1,20 @@
+<h1 class="page-header">
+  수정가능 트리 그리드 | Editable Tree Grid
+</h1>
+<p>
+  FlexGrid의 <b> childItemsPath </b>를 사용하여 데이터를 트리로 표시하면 그결과 그리드는 기본적으로 읽기 전용이됩니다.
+  이것은 트리의 모든 행이 <b> GroupRow </b>이고 그룹 행이 기본적으로 읽기 전용이기 때문에 발생합니다.</p>
+<p>
+  트리를 편집 가능하게하려면 <b> loadedRows </b> 이벤트를 처리하여 모든 행의 <b> isReadOnly </b> 속성을 false로 설정하십시오.</p>
+<p>
+  열의 <b>isReadOnly</b> 속성 또는 <b>beginningEdit</b> 이벤트를 사용하여 편집 할 수있는 열을 계속 제어 할 수 있습니다.</p>
+<p>
+  예를 들어 아래의 그리드는 사용자가 <b>'hours'</b>및 <b>'rate'</b>열의 셀을 편집 할 수 있도록합니다.
+</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/DataBinding/Editable Tree Grid' src='//codepen.io/GrapeCity-Korea/embed/XMEBJR/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/XMEBJR/'>FlexGrid/DataBinding/Editable Tree Grid</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

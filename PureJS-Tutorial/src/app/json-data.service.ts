@@ -10,6 +10,7 @@ export class JsonDataService {
   constructor(private http: Http) { }
 
   fatchData(){
+    //로컬 개발시 사용    
     return this.http.get('../assets/data/topicList.json').map(
       (res) => res.json()    
     );

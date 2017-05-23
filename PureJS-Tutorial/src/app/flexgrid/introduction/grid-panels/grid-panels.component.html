@@ -1,0 +1,48 @@
+<h1 class="page-header">
+  그리드 패널 | Grid Panels
+</h1>
+<p>
+  FlexGrid은 6개의 <a href="http://wijmo.com/5/docs/topic/wijmo.grid.GridPanel.Class.html" target="_blank">GridPanel</a>요소로 이루어저 있습니다:
+</p>
+  <ul>
+    <li>
+      <b>topLeftCells</b>:
+      Column헤더의 왼쪽 맨위의 빈 셀(Panle)을 클릭하면 전체그리드를 선택할 수 있습니다.
+    </li>
+    <li>
+      <b>columnHeaders</b>:
+      Column헤더 클릭시 Sort, 마우스 드레그로 사이즈 조정, Column 의 재배치등을 할 수 있습니다.      
+    </li>
+    <li>
+      <b>rowHeaders</b>:
+      맨 왼쪽의 셀은 클릭시 Row전체를 선택 할 수 있고, 편집 및 추가작업중을 아이콘으로 나타내 주는 역할을 합니다.
+    </li>
+    <li>
+      <b>cells</b>:
+      데이타 셀을 포함한 Panel은 셀 클릭 및 드래그를 할 수 있습니다.     </li>
+    <li>
+      <b>bottomLeftCells:</b>      
+      Column 맨 아래 왼쪽끝은
+      기본적으로 존재하지 않기 때문에 보이지 않습니다.
+    </li>
+    <li>
+      <b>columnFooters</b>:
+      데이타셀 아래Panel은 일반적으로 Column의 합이나 다른 정보를 
+      보여줄 수 있습니다. 기본적으론 보이지 않습니다.
+      </li>
+  </ul>
+<p>
+  패널은 동기화되어 그리드가 스크롤 될 때 정렬 된 상태로 유지되지만, 각 패널에는 그리드의 각 영역을 사용자 정의하는 데 사용할 수있는 고유 한 속성 세트가 있습니다.
+</p>
+<p>
+  각각의 패널을 보기 위해 그리드 위로 마우스를 올려보고, hit-test를 통해 마우스 아래에 있는 셀에 대한 정보를 확인해 볼 수 있습니다.
+</p>
+<iframe height='650' scrolling='no' title='FlexGrid/Concepts' src='//codepen.io/GrapeCity-Korea/embed/NpNjMp/?height=650&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/NpNjMp/'>FlexGrid/Concepts</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p>  
+  그리드의 맨 아래에있는 <b>columnFooters</b> 패널을 확인하십시오. 이 패널은 기본적으로 비어 있지만이 샘플에서는 <b>GroupRow</b>를 추가했습니다. 
+  <br><b>GroupRow</b>는 위의 예에서 'Sum'으로 설정된 열의 <b>aggregate 속성</b>인 값을 기반으로 계산된 각 셀의 집계 값을 자동으로 표시합니다.
+</p>
+<p></p>
+<p></p>

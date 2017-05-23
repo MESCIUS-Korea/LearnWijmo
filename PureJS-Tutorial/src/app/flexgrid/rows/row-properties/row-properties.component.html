@@ -1,0 +1,40 @@
+<h1 class="page-header">
+  행 속성 | Row Properties
+</h1>
+
+<p>
+  <b> wijmo.grid.Row </b> 클래스에는 각 행의 모양과 동작을 구성하는 데 사용할 수있는 <a href="http://wijmo.com/5/docs/topic/wijmo.grid.Row.Class.html"
+    target="_blank">거의 20 개의 속성이</a> 있습니다.
+</p>
+<p>
+  그리드가 새로 고침(refresh)되면 스크롤 가능한 행이 다시 생성되므로 새 데이터에 바인딩 될 수 있습니다. 이 때문에 행을 만든 후에 시작되는 <b> loadedRows </b> 이벤트에 대한 응답으로 일반적으로
+  행 속성을 적용해야합니다.</p>
+<p>
+  대부분의 행은 <b>Row</b> 클래스의 인스턴스이지만 그룹화된 그리드에는 일반 <b>Row</b> 클래스를 확장하는 <b>GroupRow</b> 객체가 포함될 수 있습니다.</p>
+<p>
+  <b>Row</b> 클래스의 가장 중요한 속성은 다음과 같습니다.</p>
+<ul>
+  <li>
+    <b>dataItem</b>: 행에 바인딩 된 데이터 항목에 대한 참조를 포함합니다. 이 속성은 바운드 행을 만들 때 그리드에 의해 설정되며 <b> formatItem </b> 이벤트 처리기에서 자주 사용됩니다.
+    <b>GroupRow </b> 개체의 <b> dataItem </b> 속성에는 일반 데이터 항목이 아닌 행의 <b>Group</b>에 대한 참조가 포함되어 있습니다.</li>
+  <li>
+    <b>isReadOnly</b>: 행을 편집 할 수 있는지 여부를 가져 오거나 설정합니다. 기본적으로 <b>Row</b> 인스턴스는 수정 가능하며 <b> GroupRow </b> 인스턴스는 수정할 수 없습니다.</li>
+  <li>
+    <b>isSelected</b>: 이 속성은 그리드의 <b> selectionMode </b> 속성이 <b> ListBox </b>로 설정된 경우 중요합니다. 이 경우 사용자는 인접하지 않은 행 집합을 선택할 수 있습니다. 
+    또한 <b>isSelected </b> 속성을 사용하면 개별 행의 선택된 상태를 가져 오거나 설정할 수 있습니다.</li>
+  <li>
+    <b>visible</b>: 행이 표시되는지 여부를 가져 오거나 설정합니다. 이 속성을 사용하여 조건 적으로 행을 숨길 수 있습니다.</li>
+  <li>
+    <b>isVisible</b>: 행이 현재 표시되어 있는지 여부를 나타내는 값을 가져옵니다. <b> 표시된 </b> 속성이 true로 설정되어 있어도 행이 축소 된 그룹의 일부이므로 숨겨져있을 수 있습니다.</li>
+</ul>
+
+<p>
+  예를 들어 아래 버튼을 클릭하여 그리드의 다른 모든 행을 숨기거나 표시하십시오:</p>
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/Rows/Properties' src='//codepen.io/GrapeCity-Korea/embed/BWxZbo/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/BWxZbo/'>FlexGrid/Rows/Properties</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

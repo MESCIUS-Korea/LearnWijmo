@@ -1,0 +1,35 @@
+<h1 class="page-header">
+  유효성 검사 | Validation
+</h1>
+<p>
+  FlexGrid는 여러 가지 방법으로 유효성 검사를 도와줍니다:</p>
+<ol>
+  <li>
+    <b>Automatic Type Coercion:</b> 셀 편집이 커밋되면 그리드는 열의 데이터 유형과 일치하도록 값을 자동으로 강제 변환합니다. 
+    또한 열의 <b>isRequired</b> 속성을 기반으로 null 및 빈(empty) 값을 확인합니다. 
+    데이터가 유효하지 않으면 원래 셀 값이 복원됩니다.
+  </li>
+  <li>
+    <b>Data Maps:</b> 그리드에 특정 입력 값만 허용해야하는 열이있는 경우,
+     사용자가 셀에 잘못된 내용을 입력 할 수 없도록 열에 <b>DataMap</b>을 추가하십시오.
+  </li>
+  <li>
+    <b>Event-Based Validation:</b> 그리드는 편집기의 현재 값을 확인하고 새 값이 유효하지 않은 경우,
+    편집을 취소 할 수있는 <b> cellEditEnding </ b> 이벤트를 발생시킵니다.
+  </li>
+  <li>
+    <b>CollectionView-Based Validation:</b> 그리드는 콜렉션 뷰의 <b> getError </b> 메소드를 사용하여 
+    잘못된 셀을 강조 표시하고 사용자가 잘못된 정보를 입력하는 것을 방지합니다.
+  </li>
+</ol>    
+  
+  <p>
+    아래의 그리드에는 사용자가 유효하지 않은 국가를 입력하기 못하도록하는 데이터 맵이있는 'Country' 열이 있습니다. 
+    <b> cellEditEnding </b> 이벤트는 'Sales'및 'Expenses'열에 양수 값만 입력되도록합니다:</p>
+    <hr>
+    <h3> 샘플코드: </h3>
+    <p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+    <iframe height='650' scrolling='no' title='FlexGrid/Editing/Validation' src='//codepen.io/GrapeCity-Korea/embed/MprNLW/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/MprNLW/'>FlexGrid/Editing/Validation</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+    <p></p>
+    <p></p>

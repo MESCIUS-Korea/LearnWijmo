@@ -1,0 +1,103 @@
+<h1 class="page-header">
+  헤더 사이즈 고정 | Header Resize
+</h1>
+<p>
+  사용자로 하여금, 미리 디자인 해놓은 헤더의 크기를 변경하지 않도록 설정해야할 경우가 있을 것입니다. 이럴 경우, <b>allowResizing</b> 속성 값을 설정해 줌으로써 헤더의 변경을 금지할 수 있습니다.
+</p>
+<p>
+  필터 패널을 사용하기 위해서는 Header 태그에 반드시 Input, Filter, Grouppanel 클래스를 선언해주어야 합니다.
+</p>
+<pre class="hljs javascript"><span class="hljs-literal">// 행렬 헤더의 크기 변경을 금지합니다.</span>
+flexGrid.allowResizing = wijmo.grid.AllowResizing.None;
+</pre>
+
+<div class="member-panel enum">
+  <h4><b>Members</b></h4>
+  <hr>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="identifier">None</span></td>
+        <td>0</td>
+        <td>
+          <p>사용자는 행이나 열의 크기를 조정할 수 없습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Columns</span></td>
+        <td>1</td>
+        <td>
+          <p>사용자는 열 헤더의 가장자리를 드래그하여 열의 크기를 조정할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Rows</span></td>
+        <td>2</td>
+        <td>
+          <p>사용자는 행 헤더의 가장자리를 드래그하여 행의 크기를 조정할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Both</span></td>
+        <td>Rows | Columns</td>
+        <td>
+          <p>사용자는 헤더의 가장자리를 드래그하여 행과 열의 크기를 조정할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">ColumnsAllCells</span></td>
+        <td>Columns | _AR_ALLCELLS</td>
+        <td>
+          <p>사용자는 셀의 가장자리를 드래그하여 열의 크기를 조정할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">RowsAllCells</span></td>
+        <td>Rows | _AR_ALLCELLS</td>
+        <td>
+          <p>사용자는 셀의 가장자리를 드래그하여 행의 크기를 조정할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">BothAllCells</span></td>
+        <td>Both | _AR_ALLCELLS </td>
+        <td>
+          <p>사용자는 셀의 가장자리를 드래그하여 행과 열의 크기를 조정할 수 있습니다.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3> 샘플코드: </h3>
+<p>
+  헤더 사이즈 조정을 금지하고 허용하는 방법을 보여줍니다.
+</p>
+<p><code>Result와 함께 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='630' scrolling='no' title='FlexGrid - Header Size 변경 허용 및 금지' src='//codepen.io/GrapeCity-Korea/embed/eBwQXy/?height=630&theme-id=light&default-tab=js,result&embed-version=2&editable=true'
+  frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/eBwQXy/'>FlexGrid - Header Size 변경 허용 및 금지</a> by GrapeCity Korea
+  (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

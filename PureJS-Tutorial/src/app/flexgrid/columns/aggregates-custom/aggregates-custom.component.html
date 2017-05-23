@@ -1,0 +1,24 @@
+<h1 class="page-header">
+  사용자 정의 집계 | Custom Aggregates
+</h1>
+<p>
+  FlexGrid 열은 전체 그리드 또는 각 그룹에 대한 데이터 요약을 표시 할 수있는 집계 속성을 가지고 있습니다.
+</p>
+<p>
+  그러나 어떤 경우에는 집계 속성이 충분히 유연하지 않으므로 <b>사용자 정의 코드를 사용하여 집계를 계산</b>해야 할 수도 있습니다.
+</p>
+<p>
+  아래 표에는 '매출'과 '비용'의 차이를 보여주는 '수익'열이 있습니다.
+</p>
+<p>
+  'Profit'열은 formatItem 이벤트에서 계산됩니다.
+  일반 데이터 항목의 이익은 실제 데이터 항목을 기반으로합니다.
+  그룹의 이익은 group의 <b>getAggregate</b> 메소드를 사용하여 계산됩니다.
+</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='650' scrolling='no' title='FlexGrid/Column/Custom Aggregates' src='//codepen.io/GrapeCity-Korea/embed/aJmrGV/?height=650&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/aJmrGV/'>FlexGrid/Column/Custom Aggregates</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

@@ -1,0 +1,47 @@
+<h1 class="page-header">
+  데이터 바인딩 | Data Binding
+</h1>
+<p>
+  <b>데이터 바인딩</b>은 FlexGrid를 데이터 소스에 연결하여 <b>item 컬렉션을 보고 편집</b>하는 데 사용할 수 있도록하는 프로세스입니다.</p>
+<h3>
+  <b>언바운드 (Unbound) Grids</b></h3>
+<p>
+  대부분의 그리드는 바운드 모드에서 사용되지만 FlexGrid는 바인딩되지 않은 컨트롤로 사용할 수도 있습니다. 그리드에 행과 열을 추가하고 <b> setCellData </b> 및 <b> getCellData </b>  메서드를 사용하여 각 셀의 데이터를 가져오거나 설정할 수 있습니다.</p>
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='500' scrolling='no' title='FlexGrid/DataBinding/Unbound Grids' src='//codepen.io/GrapeCity-Korea/embed/KWxLQZ/?height=500&theme-id=light&default-tab=js,result&embed-version=2&editable=true'
+  frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/KWxLQZ/'>FlexGrid/DataBinding/Unbound Grids</a> by GrapeCity Korea
+  (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>
+
+<h3>
+  <b>열 자동생성 (Auto-Generating Columns)</b></h3>
+<p>
+  바운드 모드에서 FlexGrid를 사용하려면 <b> itemsSource </b> 속성을 배열로 설정하거나 데이터가 포함된 <b> CollectionView </b>로 설정하십시오. 그리드는 데이터 항목의 각 속성에
+  대한 열을 자동으로 만듭니다.</p>
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='550' scrolling='no' title='FlexGrid/DataBinding/Auto-Generating Columns' src='//codepen.io/GrapeCity-Korea/embed/RpYmER/?height=550&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/RpYmER/'>FlexGrid/DataBinding/Auto-Generating Columns</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>
+
+<h3>
+  <b>코드로 열(Column) 정의</b>
+</h3>
+<p>
+  일부 시나리오에서는 자동으로 열을 생성하지만 일반적으로 표시할 열과 형식을 지정하는 방법을 그리드에 명시적으로 알려야합니다.
+  <b> autoGenerateColumns </b> 속성을 false로 설정하고 그리드의 <b> columns </b> 컬렉션을 채우면됩니다.</p>
+
+<hr>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함게 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='580' scrolling='no' title='FlexGrid/DataBinding/Defining Columns in Code' src='//codepen.io/GrapeCity-Korea/embed/PpdvXp/?height=580&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/PpdvXp/'>FlexGrid/DataBinding/Defining Columns in Code</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>

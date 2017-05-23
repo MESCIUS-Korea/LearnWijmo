@@ -1,0 +1,151 @@
+<h1 class="page-header">
+  셀 병합 | Cell Merging
+</h1>
+<p>
+  FlexGrid는 내용(컨텐츠) 중심의 셀 병합을 지원합니다.
+</p>
+<p>
+  셀 병합을 사용하려면 <b>allowMerging 속성</b>을 설정하여 병합할 그리드의 일부 또는 부분을 지정하고, 특정 행과 열의 <b>allowMerging</b> 속성을 <b>true</b>로 설정하십시오.
+  그렇게하면 그리드가 <b>동일한 내용의 셀을 병합</b>하여 데이터를 시각적으로 그룹화합니다.
+</p>
+<div class="member-panel enum">
+  <h4><b>Members</b></h4>
+  <hr>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="identifier">None</span></td>
+        <td>0</td>
+        <td>
+          <p>병합 안함.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">Cells</span></td>
+        <td>1</td>
+        <td>
+          <p>스크롤 가능한 셀 병합.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">ColumnHeaders</span></td>
+        <td>2</td>
+        <td>
+          <p>열(컬럼) 헤더 병합.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">RowHeaders</span></td>
+        <td>4</td>
+        <td>
+          <p>행(로우) 헤더 병합.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">AllHeaders</span></td>
+        <td>ColumnHeaders | RowHeaders</td>
+        <td>
+          <p>열/행 헤더 병합.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><span class="identifier">All</span></td>
+        <td>Cells | AllHeaders</td>
+        <td>
+          <p>헤더 및 셀 모두 벙합.</p>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  아래 예제에서 allowMerging 속성은 "Country"및 "Active"열에서 true로 설정됩니다.
+</p>
+<pre class="hljs javascript"><span class="hljs-literal">// 행렬 헤더의 크기 변경을 금지합니다.</span>
+var theGrid = new wijmo.grid.FlexGrid('#theGrid', &#123;
+    <span class="hljs-doctag">allowMerging: 'Cells',</span>    
+    columns: [
+      &#123; binding: 'country', header: 'Country', <span class="hljs-doctag">allowMerging: true </span> &#125;,
+      &#123; binding: 'sales', header: 'Sales', format: 'n2' &#125;,
+      &#123; binding: 'expenses', header: 'Expenses', format: 'n2' &#125;,
+      &#123; binding: 'active', header: 'Active', <span class="hljs-doctag"> allowMerging: true &#125;</span>,
+    ],
+    itemsSource: new wijmo.collections.CollectionView(data, &#123;
+    	sortDescriptions: ['country', 'active']
+    &#125;)
+&#125;);
+</pre>
+<br>
+<h3> 샘플코드: </h3>
+<p>
+  그리드를 정렬하여 병합에 미치는 영향을 확인하십시오.
+</p>
+<p><code>Result와 함께 HTML, JS 코드도 확인이 가능합니다.</code></p>
+<iframe height='630' scrolling='no' title='FlexGrid - Cell Merge(셀 병합)' src='//codepen.io/GrapeCity-Korea/embed/OpMrrL/?height=630&theme-id=light&default-tab=js,result&embed-version=2&editable=true'
+  frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/OpMrrL/'>FlexGrid - Cell Merge(셀 병합)</a> by GrapeCity Korea (
+  <a
+    href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>
+<hr>
+<p></p>
+<h3><b>사용자 정의 병합 | Custom Merging </b></h3>
+<p>
+  <br>기본적으로 FlexGrid는 내용을 기반으로 셀에 병합을 적용합니다. 경우에 따라 병합에 다양한 전략을 사용하는 것이 좋습니다.  
+  <br><b>wijmo.grid.MergeManager</b> 클래스를 확장하는 클래스를 정의하고 해당 유형의 객체를 그리드의 <b>mergeManager</b> 속성에 할당하면됩니다.
+</p>
+<p>
+  해당 샘플을 보시면, 저의 쪽에서 미리 사용자 정의 <b>"MergeManager" 클래스</b>를 구현해 놓았습니다. 
+  <br>사용자 지정 병합 관리자(Merge Manager)가 행과 열을 모두 포함하는 병합 된 범위를 만드는 방법에 유의하십시오. 이것은 <b>기본 병합 관리자가 수행하지 않는 작업</b>입니다.  
+</p>
+<p>
+  이를 그대로 프로젝트에 js 파일 또는 스크립트에 붙혀넣어 사용하시면, 행/열에 관계 없이 동일한 데이터에 대해서 자동으로 병합을 수행합니다.
+</p>
+<br>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함께 HTML, JS 코드도 확인이 가능합니다.</code></p>
+
+<iframe height='630' scrolling='no' title='FlexGrid - Custom Merge (사용자 정의 병합)' src='//codepen.io/GrapeCity-Korea/embed/BWLEyw/?height=630&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/BWLEyw/'>FlexGrid - Custom Merge (사용자 정의 병합)</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p></p>
+<p></p>
+<hr>
+<p></p>
+<h3><b>제한된 병합 | Restricted Merging</b></h3>
+<p>
+  <br>이미 보신 것과 같이 기본적으로 FlexGrid는 인접 셀의 내용에 관계없이 동일한 내용을 가진 셀을 병합합니다.
+  <br>하자만, 위의 사용자 정의 클래스를 변형하여, 인접한 셀(열/column)들의 내용이 같을 경우에만 동일한 데이터로서 병합을 할 수 있도록 구현할 수 있습니다.
+</p>
+<p>
+  해당 샘플을 보시면, 저의 쪽에서 미리 사용자 정의 <b>"RestrictedMergeManager" 클래스</b>를 구현해 놓았습니다. 
+  <br>이를 사용하여, <b>이전 열의 셀에 같은 값이 들어있는 경우에만 셀을 세로로 병합</b>하는 사용자 지정 병합 관리자를 사용합니다.
+</p>
+<p>
+  이를 그대로 프로젝트에 js 파일 또는 스크립트에 붙혀넣어 사용하시면, 행/열에 관계 없이 동일한 데이터에 대해서 자동으로 병합을 수행합니다.
+</p>
+<br>
+<h3> 샘플코드: </h3>
+<p><code>Result와 함께 HTML, JS 코드도 확인이 가능합니다.</code></p>
+
+<iframe height='630' scrolling='no' title='FlexGrid - 제한된 병합 | Restricted Merging' src='//codepen.io/GrapeCity-Korea/embed/qrawZO/?height=630&theme-id=light&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/qrawZO/'>FlexGrid - 제한된 병합 | Restricted Merging</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>

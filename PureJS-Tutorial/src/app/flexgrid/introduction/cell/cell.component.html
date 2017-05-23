@@ -1,0 +1,28 @@
+<h1 class="page-header">
+  셀 | Cells
+</h1>
+<p>
+  <b>FlexGridM</b> 모듈은 <b>Row 클래스</b>와 <b>Column 클래스</b>를 정의하지만 Cell 클래스는 정의하지 않습니다.이는 셀이 Row와 Column의 <b>교차 부분</b>을 나타 내기 위해 만들어진 DOM 요소 일 뿐이기 때문입니다.
+</p>  
+<p>
+  렌더링 할 때 FlexGrid는 <b>viewRange</b>의 행과 열을 스캔하고 각 조합에 대해 셀 요소를 생성합니다.셀 요소는 행에서 제공하는 <b>dataItem</b>과 열에 의해 제공되는 <b>바인딩</b>을 기반으로 다른 속성과 함께 만들어집니다.
+</p>
+
+<h3><b>formatItem 이벤트</b></h3>
+
+<p>  
+ 경우에 따라, 여러분은 데이터에 기반하여 셀 요소를 커스터마이즈 하거나, 사용자 정의 셀 요소를 생성하거나, 또는 더 이상 바인딩(계산된 컬럼, 언바운드 그리드)을 사용하고 싶지 않을때가 있을 수 있습니다.
+</p>
+<p>  
+ 이 경우 <b>formatItem 이벤트</b>를 사용하여 셀 요소를 만들거나 수정하십시오. 
+ <br>예를 들어, 아래 표는 1,000 단위 미만의 판매량을 빨간색으로 표시하고 5,000 단위 이상의 매출을 녹색으로 표시합니다.
+</p>
+<p></p>
+<h3><b>Getting / setting 셀 데이터</b></h3>
+<p>대부분의 경우 바인딩 원본 개체에서 직접 데이터를 수정하고 그리드에 결과를 표시합니다. 그러나 경우에 따라서는 그리드를 통해 데이터를 가져 오거나 설정할 수 있습니다.</p>
+<p><b>GridPanel 클래스</b>의 <b>getCellData</b> 및 <b>setCellData</b> 메소드를 사용하여이 작업을 수행 할 수 있습니다.이 메소드는 원시 또는 형식화 된 데이터를 가져오고, 데이터를 설정할 때 데이터 유형을 강제 변환하고, 바인드되지 않은 그리드에서 데이터를 가져 오거나 설정하는 옵션을 제공합니다.</p>
+<iframe height='650' scrolling='no' title='FlexGrid/Concepts' src='//codepen.io/GrapeCity-Korea/embed/ZeWveQ/?height=650&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/GrapeCity-Korea/pen/ZeWveQ/'>FlexGrid/Concepts</a> by GrapeCity Korea (<a href='http://codepen.io/GrapeCity-Korea'>@GrapeCity-Korea</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+<p></p>
+<p></p>
