@@ -142,7 +142,7 @@
             "path": "fg-multi-range-sel"
           },
           {
-            "header": "클립보드 (복사/붙혀넣기)",
+            "header": "클립보드 (복사/붙여넣기)",
             "path": "fg-clipboard"
           },          
           {
@@ -324,11 +324,11 @@
             "path": "fg-cs-conditional-styling"
           },
           {
-            "header": "셀 형식 (Format)",
+            "header": "셀 서식 (Format)",
             "path": "fg-col-cell-format"
           },
           {
-            "header": "사용자 셀 팩토리",
+            "header": "사용자 정의 셀 팩토리",
             "path": "fg-cs-cell-factory"
           },
           {
@@ -340,7 +340,7 @@
             "path": "fg-cs-sparkline"
           },          
           {
-            "header": "사용자 셀 에디터",
+            "header": "사용자 정의 셀 에디터",
             "path": "fg-cs-editors"
           },
           {
@@ -400,7 +400,7 @@
         "path": "fg-editing",
         "items": [
           {
-            "header": "클립보드 (복사/붙혀넣기)",
+            "header": "클립보드 (복사/붙여넣기)",
             "path": "fg-clipboard"
           },   
           {
@@ -558,7 +558,7 @@
         "path": "sv-tool-tip"
       },       
       {
-         "header": "클립보드 (복사/붙혀넣기)",
+         "header": "클립보드 (복사/붙여넣기)",
          "path": "fg-clipboard"
       },   
       {
