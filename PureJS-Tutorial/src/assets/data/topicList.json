@@ -550,7 +550,7 @@
     "path": "other-service",
     "items": [
       {
-        "header": "시작하기",
+        "header": "추가 서비스 시작하기",
         "path": "sv-intro"
       },
       {
